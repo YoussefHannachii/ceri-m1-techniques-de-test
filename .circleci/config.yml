@@ -14,4 +14,6 @@ jobs:
       - checkout
       - run:
           name: Run Unit Tests
-          command: mvn test
+          command: |
+            mvn clean  # Nettoyer les artefacts précédents
+            mvn test   # Exécuter les tests unitaires
