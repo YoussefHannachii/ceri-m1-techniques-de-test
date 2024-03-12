@@ -44,6 +44,7 @@ public class IPokedexTest {
     @Test
     public void addPokemonToTheList() throws PokedexException {
         int index = pokedex.addPokemon(pokemons.get(0));
+        when(pokedex.getPokemon(0)).thenReturn(pokemons.get(0));
         Pokemon retrievedPokemon = pokedex.getPokemon(index);
         assertEquals(pokemons.get(0), retrievedPokemon);
     }

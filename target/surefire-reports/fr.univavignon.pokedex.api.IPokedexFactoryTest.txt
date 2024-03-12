@@ -1,16 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: fr.univavignon.pokedex.api.IPokedexFactoryTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.226 s <<< FAILURE! - in fr.univavignon.pokedex.api.IPokedexFactoryTest
-testGetPokemonMetadata(fr.univavignon.pokedex.api.IPokedexFactoryTest)  Time elapsed: 0.132 s  <<< ERROR!
-java.lang.IllegalStateException: Could not initialize plugin: interface org.mockito.plugins.MockMaker (alternate: null)
-	at fr.univavignon.pokedex.api.IPokedexFactoryTest.setup(IPokedexFactoryTest.java:18)
-Caused by: java.lang.IllegalStateException: Internal problem occurred, please report it. Mockito is unable to load the default implementation of class that is a part of Mockito distribution. Failed to load interface org.mockito.plugins.MockMaker
-	at fr.univavignon.pokedex.api.IPokedexFactoryTest.setup(IPokedexFactoryTest.java:18)
-Caused by: java.lang.reflect.InvocationTargetException
-	at fr.univavignon.pokedex.api.IPokedexFactoryTest.setup(IPokedexFactoryTest.java:18)
-Caused by: java.lang.ExceptionInInitializerError
-	at fr.univavignon.pokedex.api.IPokedexFactoryTest.setup(IPokedexFactoryTest.java:18)
-Caused by: java.lang.NullPointerException: Cannot invoke "org.mockito.internal.configuration.plugins.PluginRegistry.getStackTraceCleanerProvider()" because "org.mockito.internal.configuration.plugins.Plugins.registry" is null
-	at fr.univavignon.pokedex.api.IPokedexFactoryTest.setup(IPokedexFactoryTest.java:18)
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.546 s - in fr.univavignon.pokedex.api.IPokedexFactoryTest
