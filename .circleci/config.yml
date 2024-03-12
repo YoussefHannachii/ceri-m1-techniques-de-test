@@ -11,17 +11,11 @@ jobs:
       - run:
           name: Display Java Version
           command: java -version
-
-      - run:
-          name: Clean workspace
-          command: rm -rf target
-
       - run:
           name: Maven Build
           command: mvn clean install
 
       - run:
           name: Run Unit Tests
-          command: |
-            mvn clean  
+          command: | 
             mvn test
