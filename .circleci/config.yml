@@ -14,8 +14,13 @@ jobs:
       - run:
           name: Maven Build
           command: mvn clean install
-
       - run:
           name: Run Unit Tests
           command: | 
             mvn test
+      - run:
+          name: Upload coverage reports to Codecov
+          uses: codecov/codecov-action@v4.0.1
+          with:
+            token: $CODECOV_TOKEN
+            slug: YoussefHannachii/ceri-m1-techniques-de-test
