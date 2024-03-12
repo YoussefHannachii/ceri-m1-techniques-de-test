@@ -9,7 +9,19 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Display Java Version
+          command: java -version
+
+      - run:
+          name: Clean workspace
+          command: rm -rf target
+
+      - run:
+          name: Maven Build
+          command: mvn clean install
+
+      - run:
           name: Run Unit Tests
           command: |
-            mvn clean  # Nettoyer les artefacts précédents
-            mvn test   # Exécuter les tests unitaires
+            mvn clean  
+            mvn test
