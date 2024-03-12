@@ -20,7 +20,7 @@ jobs:
           name: Run Unit Tests
           command: mvn test
 workflows:
+  version: 2
   upload-to-codecov:
     jobs:
-      - checkout
-      - codecov/upload
+      - build
