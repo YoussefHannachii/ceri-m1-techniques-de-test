@@ -21,11 +21,17 @@
                     <target>11</target>
                 </configuration>
             </plugin>
+
         </plugins>
 
         <testSourceDirectory>src/test/java</testSourceDirectory>
     </build>
     <dependencies>
+        <dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.2.5</version>
+        </dependency>
         <!--  JUnit 5  -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
