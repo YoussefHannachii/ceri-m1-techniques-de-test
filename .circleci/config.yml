@@ -13,6 +13,8 @@ jobs:
       - run:
           name: Run Maven Tests
           command: mvn test
+      - store_artifacts:
+          path: target
       - codecov/upload
 workflows:
   version: 2
