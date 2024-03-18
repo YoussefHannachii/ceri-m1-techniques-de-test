@@ -16,6 +16,7 @@ jobs:
       - store_artifacts:
           path: target
       - codecov/upload
+
 workflows:
   version: 2
   build-and-test-on-master:
