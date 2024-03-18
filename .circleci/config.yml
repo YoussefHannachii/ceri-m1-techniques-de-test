@@ -11,11 +11,13 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Display Java Version
-          command: java -version
-      - run:
           name: Maven Build
           command: mvn clean install
       - run:
           name: Run Unit Tests
           command: mvn test
+workflows:
+  upload-to-codecov:
+    jobs:
+      - checkout
+      - codecov/upload
