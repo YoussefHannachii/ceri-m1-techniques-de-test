@@ -15,7 +15,7 @@ public class IPokemonFactoryTest {
     IPokemonFactory pokemonFactory;
 
     @Test
-    public void pokemonCreationTest(){
+    public void pokemonCreationTest() throws PokedexException {
 
         int index = 133;
         int cp = 2729;
