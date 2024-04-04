@@ -29,7 +29,7 @@ public class IPokedexTest {
 
 
     @BeforeEach
-    public void setUp() {
+    public void setUp() throws PokedexException {
         pokemons = new ArrayList<Pokemon>();
         when(pokemonFactory.createPokemon(0,613,64,4000,4)).thenReturn(new Pokemon(0,"bulbizarre",126,126,90,613,64,4000,4,56));
         when(pokemonFactory.createPokemon(133,2729,202,5000,4)).thenReturn(new Pokemon(133,"Aquali",186,168,260,2729,202,5000,4,100));
