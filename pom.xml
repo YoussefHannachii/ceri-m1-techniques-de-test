@@ -57,6 +57,14 @@
                 </executions>
             </plugin>
 
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>3.1.2</version> <!-- Mettez la dernière version disponible -->
+                <configuration>
+                    <configLocation>checkstyle.xml</configLocation> <!-- Emplacement de votre fichier de configuration Checkstyle -->
+                </configuration>
+            </plugin>
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -71,6 +79,20 @@
 
         <testSourceDirectory>src/test/java</testSourceDirectory>
     </build>
+
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>3.1.2</version> <!-- Mettez la dernière version disponible -->
+                <configuration>
+                    <configLocation>checkstyle.xml</configLocation> <!-- Emplacement de votre fichier de configuration Checkstyle -->
+                </configuration>
+            </plugin>
+        </plugins>
+    </reporting>
+
     <dependencies>
         <dependency>
             <groupId>org.apache.maven.plugins</groupId>

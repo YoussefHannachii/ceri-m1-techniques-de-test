@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>IPokemonFactoryImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Mon Projet</a> &gt; <a href="index.source.html" class="el_package">fr.univavignon.pokedex.api.implementation</a> &gt; <span class="el_source">IPokemonFactoryImpl.java</span></div><h1>IPokemonFactoryImpl.java</h1><pre class="source lang-java linenums">package fr.univavignon.pokedex.api.implementation;
+
+import fr.univavignon.pokedex.api.*;
+
+<span class="nc" id="L5">public class IPokemonFactoryImpl implements IPokemonFactory {</span>
+
+<span class="nc" id="L7">    private IPokemonMetadataProvider pokemonMetadataProvider = new IPokemonMetadataProviderImpl();</span>
+
+    @Override
+    public Pokemon createPokemon(int index, int cp, int hp, int dust, int candy) throws PokedexException {
+<span class="nc" id="L11">        PokemonMetadata pokemonMetadata = pokemonMetadataProvider.getPokemonMetadata(index);</span>
+<span class="nc" id="L12">        double iv = (double) (pokemonMetadata.getAttack() + pokemonMetadata.getDefense() + pokemonMetadata.getStamina()) / 45*100;</span>
+<span class="nc" id="L13">        return new Pokemon(pokemonMetadata.getIndex(),</span>
+<span class="nc" id="L14">                pokemonMetadata.getName(),</span>
+<span class="nc" id="L15">                pokemonMetadata.getAttack(),</span>
+<span class="nc" id="L16">                pokemonMetadata.getDefense(),</span>
+<span class="nc" id="L17">                pokemonMetadata.getStamina(),</span>
+                cp,hp,dust,candy,iv);
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.9.202303310957</span></div></body></html>

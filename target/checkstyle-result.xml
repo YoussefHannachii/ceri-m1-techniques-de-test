@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="8.29">
+<file name="C:\Users\USER\Desktop\TechDeTest\src\main\java\fr\univavignon\pokedex\api\implementation\IPokemonFactoryImpl.java">
+<error line="12" severity="error" message="La ligne excède 120 caractères (trouvé 130)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+</file>
+<file name="C:\Users\USER\Desktop\TechDeTest\src\main\java\fr\univavignon\pokedex\api\PokemonMetadata.java">
+<error line="34" severity="error" message="La ligne excède 120 caractères (trouvé 124)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+</file>
+</checkstyle>
